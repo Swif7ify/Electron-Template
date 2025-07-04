@@ -22,7 +22,7 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone or Download
 ```bash
 git clone <your-repo-url>
-cd ocpl-logging
+cd electron-app
 ```
 
 ### 2. Install Dependencies
