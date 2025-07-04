@@ -1,30 +1,25 @@
-const { app, BrowserWindow } = require("electron");
-const path = require("path");
+import { app, BrowserWindow } from "electron";
 
 function createWindow() {
-	// Create the browser window
 	const mainWindow = new BrowserWindow({
 		width: 1200,
 		height: 800,
+		fullscreen: true,
 		webPreferences: {
 			nodeIntegration: true,
 			contextIsolation: false,
 		},
 	});
 
-	// Load the index.html file
 	mainWindow.loadFile("index.html");
 
-	// Open DevTools in development
 	if (process.env.NODE_ENV === "development") {
 		mainWindow.webContents.openDevTools();
 	}
 }
 
-// This method will be called when Electron has finished initialization
 app.whenReady().then(createWindow);
 
-// Quit when all windows are closed
 app.on("window-all-closed", () => {
 	if (process.platform !== "darwin") {
 		app.quit();
