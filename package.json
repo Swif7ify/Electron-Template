@@ -1,0 +1,15 @@
+{
+	"name": "ocpl-logging",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "electron .",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Earl Romeo Ordovez",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"electron": "^37.2.0"
+	}
+}
